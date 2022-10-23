@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,13 +11,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- Scripts -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="js/script.js" defer="true"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
 
     <style>
@@ -46,28 +48,32 @@
         <div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
         <ul class="flex flex-col p-4 mt-4  rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             <li>
-            <a href="#" class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Home</a>
+            <a href="#home" class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Home</a>
             </li>
             <li>
-            <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">View</a>
+            <a href="#trips" class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Trips</a>
             </li>
             <li>
-            <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Modification</a>
+            <a href="#startup" class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Start Up</a>
             </li>
             <li>
-            <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Blog</a>
+            <a href="#blog" class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Blog</a>
             </li>
             <li>
-            <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact Us</a>
+            <a href="#booking" class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Booking</a>
+            </li>
+            <li>
+            <a href="#contact" class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact Us</a>
             </li>
         </ul>
         </div>
         </div>
     </nav>
     </div>
-  <div class="flex justify-center content-center h-screen">
-    <div class="w-9/12 flex flex-col">
+  <div class="relative flex justify-center content-center h-screen">
+    <div class="w-9/12 flex flex-col h-screen">
       <!-- Home -->
+      <section id="home">
       <div class="w-full grid grid-cols-3">
         <div class="flex flex-col p-4 col-span-2">
             <h1 class="text-8xl">It's A Big World Out There. Let's Explore It!</h1>
@@ -83,7 +89,9 @@
             <img src="https://images.pexels.com/photos/3254754/pexels-photo-3254754.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="pyramid">
         </div>
       </div>
+    </section>
       <!-- End Home -->
+      <section id="trips">
       <div class="w-full flex justify-center content-center bg-white my-2 drop-shadow-xl h-20">
         <div class="w-10/12 grid grid-cols-4 flex justify-center content-center py-4">
             <div class="flex">
@@ -124,8 +132,9 @@
             </div>
         </div>
       </div>
+    </section>
       <!-- Destination -->
-      <div class="container flex flex-col w-full h-[450px] my-10">
+      <div class="container flex flex-col w-full h-[450px] my-10" id="tripsContainer">
         <div class="flex justify-center w-auto h-[50px]">
             <div class="flex flex-col justify-center content-center text-center">
                 <p class="text-xs">GET TO KNOW THE WORLD</p>
@@ -216,32 +225,263 @@
       <div class="cotainer w-auto h-44 my-7 ">
         <div class="grid grid-cols-5 justify-center gap-12">
             <div class="w-36 h-20">
-                <img src="https://i.pinimg.com/originals/fd/0e/de/fd0edefdc9a585324f3df11b1624c6dc.jpg" alt="axon">
+                <img class="h-[80px] w-[144px]" src="https://dwglogo.com/wp-content/uploads/2016/04/emirates_arabic_emblem.png" alt="axon">
             </div>
             <div class="w-36 h-20">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Jetstar_logo.svg/1200px-Jetstar_logo.svg.png" alt="jetStar">
+                <img class="h-[80px] w-[144px]" src="https://download.logo.wine/logo/Jetstar_Hong_Kong/Jetstar_Hong_Kong-Logo.wine.png" alt="jetStar">
             </div>
             <div class="w-36 h-20">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Expedia_2012_logo.svg/2560px-Expedia_2012_logo.svg.png" alt="">
+                <img class="h-[80px] w-[144px]" src="https://logos-world.net/wp-content/uploads/2021/02/Expedia-Logo-2012-2021.png" alt="">
             </div>
             <div class="w-36 h-20">
-                <img src="https://seekvectorlogo.com/wp-content/uploads/2018/03/qantas-vector-logo.png" alt="">
+                <img class="h-[80px] w-[144px]" src="https://seekvectorlogo.com/wp-content/uploads/2018/03/qantas-vector-logo.png" alt="" >
             </div>
             <div class="w-36 h-20">
-                <img src="https://logos-world.net/wp-content/uploads/2020/03/Alitalia-Logo.png" alt="">
+                <img class="h-[80px] w-[144px]" src="https://logos-world.net/wp-content/uploads/2020/03/Alitalia-Logo.png" alt="">
             </div>
         </div>
       </div>
       <!-- Why Us -->
-      <div class="container my-12 h-screen w-auto bg-gray-100">
-        <div>Hi</div>
+      <section id="startup">
+      <div class="my-6 h-auto w-auto bg-slate-50">
+        <div class="flex flex-col my-6 justify-center items-center">
+            <h1 class="text-4xl my-4">How To Get Started <span class="text-blue-500">With Us</span></h1>
+            <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <p class="text-center">Lorem ipsum dolor sit.</p>
+        </div>
+        <div class="grid grid-cols-3 justify-items-center">
+            <div class="bg-white h-44 w-64 rounded mt-4 mb-16 drop-shadow-lg flex flex-col justify-center items-center transition ease-in-out hover:-translate-y-1 hover:scale-110 cursor-pointer">
+                <div>
+                    <span class="material-symbols-rounded text-blue-500 text-4xl">
+                        login
+                    </span>
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                    <h2 class="text-lg font-bold">Sign Up</h2>
+                    <p class="text-xs">Create an accout to manage every trip</p>
+                    <p class="text-xs">Customize your trip and more</p>
+                </div>
+            </div>
+            <div class="bg-white h-44 w-64 rounded mt-4 mb-16 drop-shadow-lg flex flex-col justify-center items-center transition ease-in-out hover:-translate-y-1 hover:scale-110 cursor-pointer">
+                <div class="text-lg">
+                <span class="material-symbols-rounded text-yellow-500 text-4xl">
+                    account_balance_wallet
+                    </span>
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                    <h2 class="text-lg font-bold">Worth of Money</h2>
+                    <p class="text-xs">It's all depends on how much you have</p>
+                    <p class="text-xs">More Money, More Adventures </p>
+                </div>
+            </div>
+            <div class="bg-white h-44 w-64 rounded mt-4 mb-16 drop-shadow-lg flex flex-col justify-center items-center transition ease-in-out hover:-translate-y-1 hover:scale-110 cursor-pointer">
+                <div>
+                <span class="material-symbols-rounded text-sky-500 text-4xl">
+                    travel_explore
+                </span>
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                    <h2 class="text-lg font-bold">Exciting Travel</h2>
+                    <p class="text-xs">Adventures are the best way to learn</p>
+                    <p class="text-xs">More Stories to tell</p>
+                </div>
+            </div>
+        </div>
       </div>
+    </section>
+    <section id="blog">
+      <div class="h-auto w-auto flex flex-col justify-center items-center my-6">
+        <div class="mb-4">
+            <h1 class="text-4xl my-4">Get Update with <span class="text-blue-500"> Latest Blog</span></h1>
+        </div>
+        <div class="grid grid-cols-4 gap-8 justify-items-center my-2 w-auto">
+            <div class="h-72 w-60">
+                <div class="transition ease-in-out hover:-translate-y-1 hover:scale-110 cursor-pointer">
+                    <img class="object-cover w-60 h-60" src="https://images.pexels.com/photos/2409681/pexels-photo-2409681.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                </div>
+                <div class="my-3">
+                    <h1 class="transition ease-in hover:text-blue-500 hover:translate-x-1 cursor-pointer">What do you need to take with you for a nice trip.</h1>
+                    <p class="text-sm text-gray-400 py-3">July, 22 2022</p>
+                </div>
+            </div>
+            <div class="h-72 w-60">
+                <div class="transition ease-in-out hover:-translate-y-1 hover:scale-110 cursor-pointer">
+                    <img class="object-cover w-60 h-60" src="https://images.pexels.com/photos/2407089/pexels-photo-2407089.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                </div>
+                <div class="my-3">
+                    <h1 class="transition ease-in hover:text-blue-500 hover:translate-x-1 cursor-pointer">The best mountent adventures we provide in Europe</h1>
+                    <p class="text-sm text-gray-400 py-3">Aug, 15 2022</p>
+                </div>
+            </div>
+            <div class="h-72 w-60">
+                <div class="transition ease-in-out hover:-translate-y-1 hover:scale-110 cursor-pointer">
+                    <img class="object-cover w-60 h-60" src="https://images.pexels.com/photos/3104412/pexels-photo-3104412.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                </div>
+                <div class="my-3">
+                    <h1 class="transition ease-in hover:text-blue-500 hover:translate-x-1 cursor-pointer">Summer, Summer and Summer is the best time</h1>
+                    <p class="text-sm text-gray-400 py-3">Sep, 19 2022</p>
+                </div>
+            </div>
+            <div class="h-72 w-60">
+                <div class="transition ease-in-out hover:-translate-y-1 hover:scale-110 cursor-pointer">
+                    <img class="object-cover w-60 h-60" src="https://images.pexels.com/photos/2916821/pexels-photo-2916821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                </div>
+                <div class="my-3">
+                    <h1 class="transition ease-in hover:text-blue-500 hover:translate-x-1 cursor-pointer">The best places with beautiful views</h1>
+                    <p class="text-sm text-gray-400 py-3">Mar, 21 2022</p>
+                </div>
+            </div>
+            
+        </div>
+      </div>
+    </section>
+      <!-- Easy and Fast -->
+      <section id="booking">
+      <div class="relative h-1/2 w-auto my-6">
+        <div class="grid grid-cols-2 justify-items-center mx-10">
+            <div class="m-2">
+                <p class="text-sm text-blue-500">Easy and Fast</p>
+                <h1 class="text-4xl py-2">Book Your Next Trip In 3 East Steps</h1>
+                <p class="py-2 w-80 text-gray-500">"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati accusantium nihil porro explicabo assumenda est consequuntur in omnis perferendis tenetur!"</p>
+                <div class="w-80 flex justify-center my-2">
+                    <button class="py-3 px-6 bg-blue-400 text-white w-48 rounded hover:bg-blue-500 cursor-pointer transition ease-in-out hover:translate-y-2">Book Now</button>
+                </div>
+            </div>
+            
+            <div class="bg-white drop-shadow-xl w-[250px] rounded">
+                <div class="py-4 mx-2 h-40 flex justify-center">
+                    <img class="object-cover w-52 h-32 rounded-lg transition ease-in-out hover:translate-y-2 hover:scale-105" src="https://images.pexels.com/photos/1010657/pexels-photo-1010657.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                </div>
+                <div class="px-6">
+                    <a href=""><h1 class="text-lg hover:text-blue-500 transition ease-in-out hover:-translate-y-1">Trip to Greece</h1></a>
+                    <p class="text-gray-400 text-xs py-1">14 - 19 July, Full Package</p>
+                </div>
+                <div class="grid grid-cols-3 justify-items-center my-2 w-36 mx-4">
+                    <div class="bg-gray-100 rounded-full w-8 h-8 flex justify-center">
+                        <span class="material-symbols-rounded text-lg text-gray-500">
+                            restaurant
+                            </span>
+                    </div>
+                    <div class="bg-gray-100 rounded-full w-8 h-8 flex justify-center">
+                        <span class="material-symbols-rounded text-lg text-gray-500">
+                            king_bed
+                            </span>
+                    </div>
+                    <div class="bg-gray-100 rounded-full w-8 h-8 flex justify-center">
+                        <span class="material-symbols-rounded text-lg text-gray-500">
+                            celebration
+                            </span>
+                    </div>
+                </div>
+                <div class="m-4 px-2 flex justify-between items-center text-gray-300 text-sm">
+                    <span class="material-symbols-rounded">
+                        groups
+                        </span>
+                    <p class="text-gray-400">24 People Going</p>
+                    <span class="material-symbols-rounded hover:text-red-500 cursor-pointer">
+                        favorite
+                        </span>
+                </div>
+            </div>
+        </div>
+        <a href="">
+        <div class="absolute w-48 h-20 rounded-lg bg-white drop-shadow-lg grid grid-cols-3 right-16 top-40 transition ease-in-out hover:translate-x-1">
+            <div class="rounded px-2 py-2">
+                <img class="object-cover w-12 h-12 rounded-full" src="https://images.pexels.com/photos/2676589/pexels-photo-2676589.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+            </div>
+            <div class="text-sm col-span-2 py-1 px-2">
+                <p class="text-gray-400">Ongoing</p>
+                <p class="text-base">Trip to Roma</p>
+                <p><span class="text-blue-500 pr-1">30%</span>Progress</p>
+                <div class="w-24 h-1 bg-gray-200 rounded">
+                    <div class="w-12 h-1 bg-blue-500 rounded"></div>
+                </div>
+            </div>
+        </div>
+        </a>
+      </div>
+    </section>
       <!-- Why Us - Jobs -->
+      <div class="h-1/2 w-auto bg-slate-100 flex flex-col justify-center items-center">
+        <div class="flex justify-center flex-col items-center my-2">
+            <h1 class="text-xs text-sky-600 py-2 px-3 mt-2 bg-slate-200 rounded-full">Testimonies</h1>
+            <h1 class="text-4xl py-2">What People Says <span class="text-blue-500">About Us</span></h1>
+        </div>
+        <div class="relative grid grid-cols-3 gap-10 justify-items-center my-8">
+            <div class="relative mx-3 transition ease-in-out hover:scale-105 hover:-translate-y-1">
+                <div class="static">
+                <div class="absolute -left-3 -top-4">
+                    <img class="object-cover w-12 h-12 rounded-full" src="https://images.pexels.com/photos/1036627/pexels-photo-1036627.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                </div>
+                <div class="static bg-white text-sm rounded w-[300px] rounded-xl">
+                    <div class="p-4"> 
+                        <p class="py-2 px-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ipsum, nihil quaerat provident sed, officia quos aspernatur vero rerum ipsa quas porro. Excepturi delectus iste error magnam! Dolore fugiat veniam culpa suscipit facilis blanditiis. Commodi nostrum a sequi veritatis doloremque.</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="relative mx-3 transition ease-in-out hover:scale-105 hover:-translate-y-1">
+                <div class="static">
+                <div class="absolute -left-3 -top-4">
+                    <img class="object-cover w-12 h-12 rounded-full" src="https://images.pexels.com/photos/2114524/pexels-photo-2114524.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                </div>
+                <div class="static bg-white text-sm rounded w-[300px] rounded-xl">
+                    <div class="p-4"> 
+                        <p class="py-2 px-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ipsum, nihil quaerat provident sed, officia quos aspernatur vero rerum ipsa quas porro. Excepturi delectus iste error magnam! Dolore fugiat veniam culpa suscipit facilis blanditiis. Commodi nostrum a sequi veritatis doloremque.</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="relative mx-3 transition ease-in-out hover:scale-105 hover:-translate-y-1">
+                <div class="static">
+                <div class="absolute -left-3 -top-4">
+                    <img class="object-cover w-12 h-12 rounded-full" src="https://images.pexels.com/photos/3490354/pexels-photo-3490354.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                </div>
+                <div class="static bg-white text-sm rounded w-[300px] rounded-xl">
+                    <div class="p-4"> 
+                        <p class="py-2 px-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ipsum, nihil quaerat provident sed, officia quos aspernatur vero rerum ipsa quas porro. Excepturi delectus iste error magnam! Dolore fugiat veniam culpa suscipit facilis blanditiis. Commodi nostrum a sequi veritatis doloremque.</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            
+        </div>
+      </div>
       <!-- Why Us - Jobs - 2 -->
       <!-- Why Us - Jobs  - 3-->
       <!-- Form-->
       <!-- Footer-->
+    <section id="contact">
+    <footer class="p-4 bg-salte-50 rounded-lg shadow md:px-6 md:py-8 dark:bg-gray-900 my-6">
+    <div class="sm:flex sm:items-center sm:justify-between">
+        <div>
+            <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0">
+                <h1><span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Bran Vac</span></h1>
+            </a>
+            <p class="text-sm text-gray-500">Travel & Vacations</p> 
+        </div>
+        <ul class="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400">
+            <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6 ">Licensing</a>
+            </li>
+            <li>
+                <a href="#" class="hover:underline">Contact</a>
+            </li>
+        </ul>
+    </div>
+    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8">
+    <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="https://flowbite.com/" class="hover:underline">D76G</a>. All Rights Reserved.
+    </span>
+    </footer>
+    </section>
     </div>
   </div>
+  <script src="js/script.js" defer="true"></script>
 </body>
 </html>
